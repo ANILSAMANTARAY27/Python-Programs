@@ -1,0 +1,55 @@
+class MoneyCal:
+    def __init__(self):
+        self.counts=0
+
+    def coins(self):
+        count=0
+        # Ask the user if they have coins (Y/N)
+        a=input("Do you have coins: Y/N  ")
+
+        if a=='Y' or a=='y':
+            b=int(input("what is the total amount of Coins: "))
+            # calculate all the coins that you have
+            count += b
+            self.counts += b
+            return count
+        elif a=='N' or a=='n':
+            pass
+        else:
+            print("I think you don't have coins")
+            pass
+
+    def notes(self):
+        try:
+            d = int(input("How many 10 Rupee Notes do you have: "))
+            self.counts += d * 10
+
+            e = int(input("How many 20 Rupee Notes do you have: "))
+            self.counts += e * 20
+
+            f = int(input("How many 50 Rupee Notes do you have: "))
+            self.counts += f * 50
+
+            h = int(input("How many 100 Rupee Notes do you have: "))
+            self.counts += h * 100
+
+            t = int(input("How many 200 Rupee Notes do you have: "))
+            self.counts += t * 200
+
+            r = int(input("How many 500 Rupee Notes do you have: "))
+            self.counts += r * 500
+
+        except ValueError:
+            # Handle invalid input for notes
+            print("Invalid input. Please enter a valid integer for notes.")
+
+    def calculate_total(self):
+        # Print the total amount of Rupees
+        print("You have:", self.counts, "Rupees")
+
+
+if __name__ == "__main__":
+    c=MoneyCal()
+    c.coins()
+    c.notes()
+    c.calculate_total()

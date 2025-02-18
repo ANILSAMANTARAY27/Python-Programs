@@ -1,5 +1,3 @@
 hello everyone
 how are you! 
 
-i am just doing git add , git commit and git push in a single shot !!!
-can you believe this !!!!!!
